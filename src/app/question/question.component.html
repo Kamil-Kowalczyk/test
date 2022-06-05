@@ -1,4 +1,7 @@
 <h3>{{questions[i].content}}</h3>
-<div *ngFor="let question of questions[i].answers, let num=index">
-    <p><input type="radio" [(ngModel)]="questions[i].chosenAnswerIndex" value="{{num}}">{{question}}</p>
+<div *ngFor="let answer of questions[i].answers, index as num">
+    <p><input type="radio" [(ngModel)]="questions[i].chosenAnswerIndex" value="{{num}}">{{answer}}</p>
+    <!--<p><input type="radio" [(ngModel)]="questions[i].chosenAnswerIndex" value="{{num}}">{{question}}</p>-->
 </div>
+<button (click)="go_next()">Go next</button>
+<!-- <button (click)="go_prev()">Go prev</button> -->
